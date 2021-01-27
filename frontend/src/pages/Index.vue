@@ -61,7 +61,7 @@ query {
 import Articles from "~/components/Articles";
 import { getMetaTags } from "~/utils/seo";
 import { getStrapiMedia } from "~/utils/medias";
-import { getMetaTags} from '~/utils/seo';
+
 export default {
   components: {
     Articles,
