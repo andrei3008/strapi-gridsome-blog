@@ -1,6 +1,10 @@
 <template>
   <Layout>
-    <Homepage />
+    <div class="uk-section">
+      <div class="uk-container uk-container-large">
+        <h1>{{ $page.strapi.portofoliu.hero.title }}</h1>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -20,7 +24,7 @@ query {
         }
       }
     }
-    homepage {
+    portofoliu {
       hero {
         title
       }
@@ -56,17 +60,13 @@ query {
 import Articles from "~/components/Articles";
 import { getMetaTags } from "~/utils/seo";
 import { getStrapiMedia } from "~/utils/medias";
-import Homepage from '~/templates/Homepage.vue'
-
-
 
 export default {
   components: {
-    Homepage,
-
+    Articles,
   },
   metaInfo() {
-    const { seo } = this.$page.strapi.homepage;
+    const { seo } = this.$page.strapi.portofoliu;
     const { defaultSeo, favicon } = this.$page.strapi.global;
 
     // Merge default and article-specific SEO data
